@@ -1,0 +1,1602 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap"
+      rel="stylesheet"
+    />
+     <link rel="icon" type="image/png" href="images/favicon.png" />
+    <title> Caziiz Consultation Company</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Nunito Sans", Arial, sans-serif;
+      }
+      :root {
+        --primary-color: #1b9ce3;
+        --secondary-color: #fff;
+        --footer-color: #343a40;
+        --border-color: linear-gradient(135deg, #794cff8f, #60a5fa8f);
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      input,
+      select,
+      textarea,
+      button,
+      a {
+        font-family: "Nunito Sans", Arial, sans-serif;
+      }
+       .top_header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.8rem 8rem;
+      }
+      .top_header_email {
+        display: flex;
+      }
+      .top_header_email img {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+        margin-top: 5px;
+      }
+      .top_header_email h4 p {
+        margin-left: 0.5rem;
+        font-size: medium;
+        font-weight: 100;
+      }
+      .top_header_phone {
+        display: flex;
+      }
+      .top_header_phone i {
+        color: rgb(26, 137, 255);
+        font-size: 25px;
+        margin-top: 10px;
+        margin-left: 15px;
+        padding-right: 10px;
+        
+      }
+      .top_header_phone h4 {
+        padding: 0.7rem;
+      }
+      .top_header_phone p {
+        margin-left: 0.5rem;
+        font-size: 1rem;
+        font-weight: 100;
+      }
+      .top_header button {
+        max-width: 200px;
+        padding: 0.8rem;
+        background-color: var(--primary-color);
+        border: 1px solid var(--primary-color);
+        font-size: large;
+        color: var(--secondary-color);
+        border-radius: 2rem;
+        transition: 0.4s ease;
+      }
+      .top_header button:hover {
+        background-color: transparent;
+        color: var(--primary-color);
+        transition: 0.4s ease;
+      }
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 80px;
+        background-color: #0d1128;
+        color: white;
+      }
+
+      .nav ul {
+        display: flex;
+        list-style: none;
+      }
+
+      .nav ul li {
+        padding-left: 30px;
+        font-size: medium;
+        /* font-weight: bold; */
+      }
+
+      .nav ul li a {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+      }
+      .nav ul li a.active {
+        color: rgb(20, 113, 252);
+      }
+      .menue_toggle{
+          display: none;
+        }
+      .form {
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        border-radius: 25px;
+        border: 1px solid rgba(255, 255, 255, 0.164);
+        padding: 5px 15px;
+      }
+
+      .form input {
+        background: transparent;
+        border: none;
+        color: #ffffffaf;
+        outline: none;
+        font-size: 15px;
+        height: 40px;
+        width: 160px;
+      }
+      .form input:active {
+        border: none;
+      }
+
+      .form input::placeholder {
+        color: #aaa;
+      }
+
+      .form button {
+        background: none;
+        border: none;
+        color: #aaa;
+        font-size: 16px;
+      }
+      .form button:hover {
+        color: #fff;
+      }
+      /* request quote section */
+      .request {
+        margin-top: 0;
+        height: 330px;
+        background-image: url(images/cover.jpg);
+        background-position: center;
+        background-size: cover;
+      }
+      .request .request_content {
+        display: flex;
+        background: linear-gradient(to right, #1566adcc 0%, #1b9de3da 100%);
+        align-items: center;
+        color: var(--secondary-color);
+        height: 100%;
+        justify-content: center;
+        text-align: center;
+      }
+      .request_content h1 {
+        font-weight: bolder;
+        font-size: 95px;
+      }
+      .request_content p {
+        font-size: medium;
+        font-weight: 300;
+      }
+      /* section part */
+      .container{
+        display: flex;
+        width: 100%;
+        /* height: 100vh; */
+        padding: 30px;
+        background-color: rgb(255, 255, 255);
+
+      }
+      .left_part_container{
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+        flex: 2;
+        justify-content: left;
+        text-align: left;
+        /* align-items: center; */
+        background-color: #ffffff;
+        /* height: 100vh; */
+      }
+      .left_part_container p{
+        padding: 20px 0px;
+        line-height: 2;
+      }
+      .left_part_container img{
+        width: 100%;
+      }
+      .left_tag{
+        background-color: #ffffff;
+        padding: 10px 0px;
+        display: flex;
+        /* height: 100px; */
+      }
+      .left_tag span{
+        padding: 10px 30px;
+        border-radius: 7px;
+        background-color: #ffffff;
+        margin-right: 10px;
+        border: 1px solid gainsboro;
+        transition: 0.4s ease;
+      }
+      .left_tag span:hover{
+        border: 1px solid black;
+        transition: 0.4s ease;
+      }
+      .profile{
+        display: flex;
+        gap: 20px;
+        padding: 30px;
+        margin-top: 30px;
+        background-color: rgba(220, 220, 220, 0.395);
+      }
+      .profile img{
+        width: 150px;
+        height: 150px;
+        margin-right: 20px;
+      }
+      .profile h3{
+        font-size: 24px;
+      }
+      .profile h3 p{
+        font-size: 1rem;
+        font-weight: 100;
+      }
+      /* comment section */
+      .comment-box {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      margin-top: 30px;
+      max-width: 700px;
+      /* border-bottom: 1px solid #eee; */
+      padding-bottom: 25px;
+    }
+
+    .comment-box img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .comment-content {
+      flex: 1;
+    }
+
+    .comment-content h4 {
+      margin: 0;
+      color: #2c3e50;
+      font-size: 18px;
+    }
+
+    .comment-content .date {
+      color: #aaa;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 3px;
+    }
+
+    .comment-content p {
+      margin: 12px 0;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .reply-btn {
+      background-color: transparent;
+      border: 1px solid #aaa;
+      color: #555;
+      font-size: 12px;
+      padding: 6px 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .reply-btn:hover {
+      color: #000000;
+      border-color: #2c3e50;
+    }
+    .leave_comment{
+      padding: 20px;
+      font-size: 23px;
+    }
+    .form-container {
+        max-width: 800px;
+        background: #fcfcfc;
+        /* margin: 40px auto 20px; */
+        padding: 60px 80px;
+        text-align: left;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.03);
+      }
+      .form-container input,
+      .form-container textarea {
+        width: 100%;
+        padding: 16px 18px;
+        margin-bottom: 20px;
+        border: 1px solid #e2e2e2;
+        border-radius: 2px;
+        margin-top: 10px;
+        font-size: 15px;
+        color: #333;
+        outline: none;
+      }
+      .form-container input:focus,
+      .form-container textarea:focus {
+        border-color: #1e90ff;
+      }
+      .form-container textarea {
+        height: 160px;
+        resize: none;
+      }
+      .form-container button {
+        display: block;
+        background: #0ea6ef;
+        color: white;
+        border: none;
+        border-radius: 30px;
+        font-size: 15px;
+        padding: 14px 40px;
+        cursor: pointer;
+        transition: 0.3s ease;
+        margin: 10px auto 0;
+      }
+      .form-container button:hover {
+        background: #0c8cd4;
+      }
+      .right_part_container{
+        display: flex;
+        flex-direction: column;
+        flex: 0.7;
+        background-color: #ffffff;
+        /* height: 100vh; */
+        justify-content: left;
+        /* align-items: center; */
+        padding: 10px;
+        gap: 50px;
+      }
+      .form_search{
+        background-color: #fafafa;
+        width: 95%;
+        height: 70px;
+        display: flex;
+        margin-top: 30px;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+      }
+      .search_form{
+        display: flex;
+        /* flex-direction: row; */
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        /* border-radius: 25px; */
+        border: 1px solid rgba(255, 255, 255, 0.164);
+        padding: 5px 25px;
+        height: 50px;
+        
+      }
+      .search_form input{
+         background: transparent;
+        border: none;
+        color: #ffffffaf;
+        outline: none;
+        font-size: 15px;
+        height: 40px;
+        color: black;
+        /* width: 160px; */
+      }
+      .search_form input:active {
+        border: none;
+      }
+
+      .search_form input::placeholder {
+        color: #aaa;
+        font-size: 13px;
+      }
+
+      .search_form button {
+        border: none;
+        background-color: transparent;
+        color: #aaa;
+        font-size: 12px;
+      }
+      .category{
+        display: flex;
+        flex-direction: column;
+       
+      }
+      .category h2{
+        font-weight: small;
+        font-size: 22px;
+        color: #1d2554;
+      }
+      .category_items{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-bottom:1px solid rgba(128, 128, 128, 0.352) ;
+         padding-top: 20px;
+         color: #1b9ce3;
+      }
+      .category_items h3{
+        font-size: 17px;
+        font-weight: 500;
+      }
+      .category_items p{
+        color: rgb(0, 0, 0);
+        font-size: 13px;
+      }
+      .category_items_last{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 20px;
+        font-size: 14px;
+        color: #1b9ce3;
+      }
+      .category_items_last h3{
+        font-size: 17px;
+        font-weight: 500;
+      }
+      .category_items_last p{
+        color: gray;
+      }
+      .category_items_pragraph p{
+        font-size: 13px;
+      }
+      /* blog */
+      .blog-item_category {
+        display: flex;
+        gap: 20px;
+        /* background-color: #0090dd; */
+        padding: 20px;
+        margin-top: 25px;
+      }
+
+      .blog-item_category img {
+        width: 100px;
+        height: 100px;
+        margin-right: 10px;
+        border-radius: 3px;
+      }
+
+      .blog-text_category p {
+        font-size: 15px;
+        margin-bottom: 15px;
+        color: #888585;
+      }
+
+      .blog-text_category span {
+        font-size: 13px;
+        color: #888585;
+      }
+    .tag-cloud h3 {
+      color: #2c3e50;
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    .tag {
+      border: 1px solid #ccc;
+      padding: 6px 7px;
+      border-radius: 4px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .tag:hover {
+      background-color: #2c3e50;
+      color: white;
+      border-color: #2c3e50;
+    }
+    /* footer */
+    .footer {
+        background-color: #1a1a1a;
+        margin-top: 80px;
+        position: relative;
+        bottom: 0;
+        padding: 120px 100px;
+        color: var(--secondary-color);
+      }
+
+      .footer-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+
+      .footer-box {
+        width: 22%;
+      }
+
+      .footer-box h2 {
+        font-size: 20px;
+        margin-bottom: 25px;
+      }
+
+      .footer-box p {
+        font-size: 15px;
+        color: #ccc;
+        margin-bottom: 15px;
+        line-height: 1.6;
+      }
+
+      .footer-box i {
+        margin-right: 10px;
+        color: #fff;
+      }
+
+      /* Blog section */
+      .blog-item {
+        display: flex;
+        margin-bottom: 15px;
+      }
+
+      .blog-item img {
+        width: 80px;
+        height: 70px;
+        margin-right: 10px;
+        border-radius: 3px;
+      }
+
+      .blog-text p {
+        font-size: 15px;
+        margin-bottom: 5px;
+        color: #ccc;
+      }
+
+      .blog-text span {
+        font-size: 13px;
+        color: #ffffff;
+      }
+
+      /* Links */
+      .footer-links {
+        list-style: none;
+      }
+
+      .footer-links li {
+        margin-bottom: 10px;
+        color: #ccc;
+        cursor: pointer;
+      }
+
+      .footer-links li:hover {
+        color: #00aaff;
+      }
+
+      /* Subscribe Section */
+      .subscribe-box {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 25px;
+      }
+
+      .subscribe-box input {
+        padding: 12px;
+        border: none;
+        outline: none;
+        background-color: #2c2c2c;
+        color: #ccc;
+        margin-bottom: 10px;
+      }
+
+      .subscribe-box button {
+        background-color: #00aaff;
+        border: none;
+        color: #fff;
+        padding: 12px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .subscribe-box button:hover {
+        background-color: #0090dd;
+      }
+
+      /* Social icons */
+      .connect-title {
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+
+      .social-icons a {
+        color: #fff;
+        font-size: 20px;
+        margin-right: 15px;
+        display: inline-block;
+        transition: 0.3s;
+      }
+
+      .social-icons a:hover {
+        color: #00aaff;
+      }
+
+      /* Footer bottom */
+      .footer-bottom {
+        text-align: center;
+        margin-top: 40px;
+        font-size: 14px;
+        color: #999;
+      }
+
+      .footer-bottom i {
+        color: #00aaff;
+      }
+      .left_part_container{
+        animation: fadeIn 0.5s ease-in forwards;
+      }
+      @keyframes fadeIn {
+        0%{
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        100%{
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .right_part_container{
+        animation: fadeIn 0.5s ease-in forwards;
+      }
+      @keyframes fadeIn {
+        0%{
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        100%{
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+            /* footer */
+      .blog-item img {
+        animation: delay 5s ease-in forwards alternate;
+      }
+      @keyframes delay {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      .social-icons {
+        transition: transform 0.5s ease;
+      }
+      .social-icons {
+        animation: bounce 0.5s ease-in forwards alternate;
+      }
+      @keyframes bounce {
+        0% {
+          transform: translateY(50px);
+          opacity: 0.4;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      @media (min-width:969px) and (max-width:1024px){
+            .top_header {
+          justify-content: space-between;
+          padding: 10px 30px;
+        }
+        .nav {
+          justify-content: space-between;
+          padding: 0.3rem 1.5rem;
+        }
+        
+        .cover {
+          height: 100vh;
+        }
+        .cover_content {
+          margin-top: -1.5rem;
+        }
+        .blog-text_category span{
+          /* background-color: #00aaff; */
+          padding: 0.1rem;
+        }
+        .footer {
+          padding: 80px 60px;
+          }
+
+        .footer-container {
+          flex-wrap: wrap;
+          justify-content: space-between;
+          gap: 40px;
+        }
+      }
+      @media (min-width:769px) and (max-width:968px){
+        .top_header {
+          justify-content: space-between;
+          padding: 10px 30px;
+        }
+        .nav {
+          justify-content: space-between;
+          padding: 0.3rem 1.5rem;
+        }
+        .container{
+          display: block;
+        }
+        .footer {
+          padding: 80px 60px;
+        }
+
+        .footer-container {
+          flex-wrap: wrap;
+          justify-content: space-between;
+          gap: 40px;
+        }
+
+        .footer-box {
+          width: 45%;
+        }
+
+        .social-icons {
+          justify-content: flex-start;
+        }
+      }
+      @media (min-width:560px) and (max-width:768px){
+        .top_header {
+          justify-content: center;
+          gap: 15px;
+          padding: 0.3rem 1rem;
+          background-color: aqua;
+        }
+        .top_header h1 {
+          font-size: 1.4rem;
+          margin-left: 1.3rem;
+        }
+        .top_header_email h4{
+          background-color: #faebd7;
+          font-size: 0.9rem;
+        }
+        .top_header_email h4 p{
+          /* background: #000; */
+          font-size: 0.5rem;
+          width: 150px;
+        }
+        .top_header_phone {
+          /* background-color: antiquewhite; */
+          /* flex-direction: row; */
+          padding:0rem;
+        }
+        .top_header_phone h4 {
+          font-size: 0.9rem;
+        }
+        .top_header_phone p {
+          /* background-color: #faebd7; */
+          font-size: 0.6rem;
+          width: 150px;
+        }
+        .top_header button {
+          padding: 0.5rem 2rem;
+          font-size: 0.7rem;
+        }
+        .nav {
+          justify-content: space-between;
+          gap: 10px;
+          padding: 0.3rem 1rem;
+        }
+        .nav ul li a {
+          font-size: 0.9rem;
+        }
+        .container{
+          display: block;
+        }
+        .footer {
+          padding: 60px 30px;
+        }
+
+        .footer-container {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          gap: 40px;
+        }
+
+        .footer-box {
+          width: 100%;
+          max-width: 480px;
+        }
+
+        .footer-box h2 {
+          font-size: 19px;
+          margin-bottom: 12px;
+        }
+
+        .footer-box p {
+          font-size: 14px;
+          line-height: 1.7;
+        }
+
+        .blog-item {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .blog-item img {
+          width: 100%;
+          height: auto;
+          margin-bottom: 10px;
+        }
+
+        .footer-links li {
+          margin-bottom: 10px;
+          font-size: 15px;
+        }
+
+        .subscribe-box input,
+        .subscribe-box button {
+          width: 100%;
+          max-width: 400px;
+        }
+
+        .social-icons {
+          justify-content: center;
+        }
+      } 
+      @media (min-width:345px) and (max-width:559px){
+        .top_header {
+          justify-content: space-between;
+          /* gap: 15px; */
+          padding: 0.3rem 1rem;
+        }
+        .top_header_email {
+          display: none;
+        }
+        .top_header_phone {
+          display: none;
+        }
+        .top_header button {
+          padding: 0.3rem 1rem;
+          font-size: 0.7rem;
+        }
+        .nav {
+          justify-content: space-between;
+          gap: 20px;
+          padding: 0.3rem 0.3rem;
+        }
+        .nav ul {
+          display: none;
+          position: absolute;
+          left: 0;
+          top: 100px;
+          flex-direction: column;
+          background-color: #0d1128;
+          text-align: left;
+          /* width: 100px; */
+          z-index: 9;
+          /* height: 400px; */
+        }
+        .nav ul li {
+          padding: 1rem;
+        }
+        .menue_toggle {
+          display: block;
+        }
+        .container{
+          display: block;
+        }
+        .left_tag span{
+          padding: 0.6rem;
+        }
+        
+        .profile{
+          display: flex;
+          width: 340px;
+          margin: 0 auto;
+          margin-left: -50px;
+        }
+        .profile img{
+          width: 100px;
+          height: 100px;
+        }
+        .profile h3{
+          font-size: 1rem;
+        }
+        .profile h3 p{
+          font-size: 0.7rem;
+        }
+        .comment-box{
+          margin-left: -30px;
+        }
+        .form-container{
+          width: 340px;
+          padding: 10px;
+          margin: 0 auto;
+          margin-left: -60px;
+        }
+.footer {
+          padding: 50px 20px;
+          text-align: left;
+        }
+
+        .footer-container {
+          display: flex;
+          flex-direction: column;
+          gap: 40px;
+        }
+
+        .footer-box {
+          width: 100%;
+        }
+
+        .footer-box h2 {
+          font-size: 18px;
+          margin-bottom: 15px;
+        }
+
+        .footer-box p,
+        .footer-links li,
+        .blog-text p {
+          font-size: 14px;
+          line-height: 1.6;
+        }
+
+        /* Recent blog vertical layout */
+        .blog-item {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 10px;
+        }
+
+        .blog-item img {
+          width: 80px;
+          height: 70px;
+          border-radius: 5px;
+        }
+
+        .blog-text {
+          flex: 1;
+        }
+
+        /* Links spacing */
+        .footer-links {
+          margin-top: 10px;
+        }
+        .footer-links li {
+          margin-bottom: 8px;
+        }
+
+        /* Subscribe section */
+        .subscribe-box {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          gap: 10px;
+          margin-top: 10px;
+        }
+
+        .subscribe-box input {
+          width: 100%;
+          background-color: #2c2c2c;
+          color: #ccc;
+          border: none;
+          padding: 12px;
+        }
+
+        .subscribe-box button {
+          width: 100%;
+          background-color: #00aaff;
+          color: #fff;
+          border: none;
+          padding: 12px;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+
+        /* Connect section */
+        .connect-title {
+          margin-top: 20px;
+        }
+
+        .social-icons {
+          display: flex;
+          justify-content: flex-start;
+          margin-top: 10px;
+          gap: 15px;
+        }
+
+        .social-icons a {
+          font-size: 22px;
+          color: #fff;
+        }
+
+        /* Bottom text */
+        .footer-bottom {
+          font-size: 13px;
+          text-align: center;
+          margin-top: 30px;
+          line-height: 1.6;
+        }
+      }
+      @media (max-width:344px){
+        .top_header {
+          justify-content: space-between;
+          /* gap: 15px; */
+          padding: 0.3rem 1rem;
+        }
+        .top_header_email {
+          display: none;
+        }
+        .top_header_phone {
+          display: none;
+        }
+        .top_header button {
+          padding: 0.3rem 1rem;
+          font-size: 0.7rem;
+        }
+        .nav {
+          justify-content: space-between;
+          gap: 20px;
+          padding: 0.3rem 0.3rem;
+        }
+        .nav ul {
+          display: none;
+          position: absolute;
+          left: 0;
+          top: 100px;
+          flex-direction: column;
+          background-color: #0d1128;
+          text-align: left;
+          /* width: 100px; */
+          z-index: 9;
+          /* height: 400px; */
+        }
+        .nav ul li {
+          padding: 1rem;
+        }
+        .menue_toggle {
+          display: block;
+        }
+        .container{
+          display: block;
+        }
+        
+        .left_tag span{
+          padding: 0.6rem;
+        }
+        
+        .profile{
+          display: flex;
+          width: 330px;
+          margin-left: -60px;
+        }
+        .profile img{
+          width: 100px;
+          height: 100px;
+        }
+        .profile h3{
+          font-size: 1rem;
+        }
+        .profile h3 p{
+          font-size: 0.7rem;
+        }
+        .comment-box{
+          margin-left: -30px;
+        }
+        .form-container{
+          width: 330px;
+          padding: 10px;
+          margin-left: -65px;
+        }
+        .footer {
+          padding: 50px 20px;
+          text-align: left;
+        }
+
+        .footer-container {
+          display: flex;
+          flex-direction: column;
+          gap: 40px;
+        }
+
+        .footer-box {
+          width: 100%;
+        }
+
+        .footer-box h2 {
+          font-size: 18px;
+          margin-bottom: 15px;
+        }
+
+        .footer-box p,
+        .footer-links li,
+        .blog-text p {
+          font-size: 14px;
+          line-height: 1.6;
+        }
+
+        /* Recent blog vertical layout */
+        .blog-item {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 10px;
+        }
+
+        .blog-item img {
+          width: 80px;
+          height: 70px;
+          border-radius: 5px;
+        }
+
+        .blog-text {
+          flex: 1;
+        }
+
+        /* Links spacing */
+        .footer-links {
+          margin-top: 10px;
+        }
+        .footer-links li {
+          margin-bottom: 8px;
+        }
+
+        /* Subscribe section */
+        .subscribe-box {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          gap: 10px;
+          margin-top: 10px;
+        }
+
+        .subscribe-box input {
+          width: 100%;
+          background-color: #2c2c2c;
+          color: #ccc;
+          border: none;
+          padding: 12px;
+        }
+
+        .subscribe-box button {
+          width: 100%;
+          background-color: #00aaff;
+          color: #fff;
+          border: none;
+          padding: 12px;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+
+        /* Connect section */
+        .connect-title {
+          margin-top: 20px;
+        }
+
+        .social-icons {
+          display: flex;
+          justify-content: flex-start;
+          margin-top: 10px;
+          gap: 15px;
+        }
+
+        .social-icons a {
+          font-size: 22px;
+          color: #fff;
+        }
+
+        /* Bottom text */
+        .footer-bottom {
+          font-size: 13px;
+          text-align: center;
+          margin-top: 30px;
+          line-height: 1.6;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="top_header">
+        <h1>Consultation</h1>
+        <div class="top_header_email">
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/2111/2111644.png"
+            alt=""
+          />
+          <h4>
+            Email
+            <p>
+              Youremail@gmail.com
+            </p>
+          </h4>
+        </div>
+        <div class="top_header_phone">
+          <i class="fa-solid fa-phone"></i>
+          <h4>
+            Call Us:
+            <p>1234 567 89</p>
+          </h4>
+        </div>
+        <button>Free Consulting</button>
+      </div>
+      <div class="nav">
+        <ul>
+          <li><a href="index.html ">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="project.html">Projects</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="blog.html"  class="active">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="menue_toggle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <form class="form">
+          <input type="text" placeholder="Search" />
+          <button type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+      </div>
+    </header>
+    <div class="request">
+      <div class="request_content">
+        <h1>
+          Single Blog
+          <p>
+            Here Are Some Of the Reveiws Our Customers Said About Us.
+          </p>
+        </h1>
+      </div>
+    </div>
+    <!-- section part -->
+    <section>
+      <div class="container">
+        <div class="left_part_container">
+          <h1>
+            #2. Creative WordPress Themes 
+          </h1>
+          <p>
+            Temporibus ad error suscipit exercitationem hic molestiae totam obcaecati rerum, eius aut, in. Exercitationem atque quidem tempora maiores ex architecto voluptatum aut officia doloremque. Error dolore voluptas, omnis molestias odio dignissimos culpa ex earum nisi consequatur quos odit quasi repellat qui officiis reiciendis incidunt hic non? Debitis commodi aut, adipisci.
+          </p>
+          <img src="images/blog_img2.png" alt="">
+          <p>
+            Quisquam esse aliquam fuga distinctio, quidem delectus veritatis reiciendis. Nihil explicabo quod, est eos ipsum. Unde aut non tenetur tempore, nisi culpa voluptate maiores officiis quis vel ab consectetur suscipit veritatis nulla quos quia aspernatur perferendis, libero sint. Error, velit, porro. Deserunt minus, quibusdam iste enim veniam, modi rem maiores. <br> <br>
+            Odit voluptatibus, eveniet vel nihil cum ullam dolores laborum, quo velit commodi rerum eum quidem pariatur! Quia fuga iste tenetur, ipsa vel nisi in dolorum consequatur, veritatis porro explicabo soluta commodi libero voluptatem similique id quidem? Blanditiis voluptates aperiam non magni. Reprehenderit nobis odit inventore, quia laboriosam harum excepturi ea. <br> <br>
+            Adipisci vero culpa, eius nobis soluta. Dolore, maxime ullam ipsam quidem, dolor distinctio similique asperiores voluptas enim, exercitationem ratione aut adipisci modi quod quibusdam iusto, voluptates beatae iure nemo itaque laborum. Consequuntur et pariatur totam fuga eligendi vero dolorum provident. Voluptatibus, veritatis. Beatae numquam nam ab voluptatibus culpa, te netur recusandae! <br> <br>
+            Voluptas dolores dignissimos dolorum temporibus, autem aliquam ducimus at officia adipisci quasi nemo a perspiciatis provident magni laboriosam repudiandae iure iusto commodi debitis est blanditiis alias laborum sint dolore. Dolores, iure, reprehenderit. Error provident, pariatur cupiditate soluta doloremque aut ratione. Harum voluptates mollitia illo minus praesentium, rerum ipsa debitis, inventore? <br> <br>
+          </p>
+          <div class="left_tag">
+            <span>
+              life
+            </span>
+            <span>
+              Sport
+            </span>
+            <span>
+              Tech
+            </span>
+            <span>
+              Travel
+            </span>
+          </div>
+          <div class="profile">
+            <img src="images/customer1.png" alt="">
+            <h3>George Washington
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem necessitatibus voluptate quod mollitia delectus aut, sunt placeat nam vero culpa sapiente consectetur similique, inventore eos fugit cupiditate numquam!</p>
+            </h3>
+          </div>
+           <div class="comment-box">
+    <img src="images/customer1.png" alt="User">
+    <div class="comment-content">
+      <h4>John Doe</h4>
+      <div class="date">June 27, 2019 at 2:21pm</div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum 
+      necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure!
+      Quam voluptas earum impedit necessitatibus, nihil?</p>
+      <button class="reply-btn">REPLY</button>
+    </div>  
+  </div>
+             <div class="comment-box">
+    <img src="images/customer4.png" alt="User">
+    <div class="comment-content">
+      <h4>John Doe</h4>
+      <div class="date">June 27, 2019 at 2:21pm</div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum 
+      necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure!
+      Quam voluptas earum impedit necessitatibus, nihil?</p>
+      <button class="reply-btn">REPLY</button>
+    </div>  
+  </div>
+             <div class="comment-box">
+    <img src="images/customer3.png" alt="User">
+    <div class="comment-content">
+      <h4>John Doe</h4>
+      <div class="date">June 27, 2019 at 2:21pm</div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum 
+      necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure!
+      Quam voluptas earum impedit necessitatibus, nihil?</p>
+      <button class="reply-btn">REPLY</button>
+    </div>  
+  </div>
+             <div class="comment-box">
+    <img src="images/customer1.png" alt="User">
+    <div class="comment-content">
+      <h4>John Doe</h4>
+      <div class="date">June 27, 2019 at 2:21pm</div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum 
+      necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure!
+      Quam voluptas earum impedit necessitatibus, nihil?</p>
+      <button class="reply-btn">REPLY</button>
+    </div>  
+  </div>
+             <div class="comment-box">
+    <img src="images/customer2.png" alt="User">
+    <div class="comment-content">
+      <h4>John Doe</h4>
+      <div class="date">June 27, 2019 at 2:21pm</div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum 
+      necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure!
+      Quam voluptas earum impedit necessitatibus, nihil?</p>
+      <button class="reply-btn">REPLY</button>
+    </div>  
+  </div>
+  <div class="leave_comment">
+    <h3>leave a comment</h3>
+  </div>
+   <div class="form-container">
+        <form>
+          <label >Name</label>
+          <input type="text"  />
+          <label >Email</label>
+          <input type="email">
+          <label >Website</label>
+          <input type="text" >
+          <label >Message</label>
+          <textarea ></textarea>
+          <button type="submit">post comment</button>
+        </form>
+      </div>
+        </div>
+      <div class="right_part_container">
+          <div class="form_search">
+            <form class="search_form">
+          <input type="text" placeholder="Type a keyword and hit Enter" />
+          <button type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+          </div>
+            <div class="category">
+              <h2>category</h2>
+              <div class="category_items">
+                <h3>Bussines</h3>
+                <p>(6)</p>
+              </div>
+              <div class="category_items">
+                <h3>Bussines</h3>
+                <p>(6)</p>
+              </div>
+              <div class="category_items">
+                <h3>Bussines</h3>
+                <p>(6)</p>
+              </div>
+              <div class="category_items">
+                <h3>Bussines</h3>
+                <p>(6)</p>
+              </div>
+              <div class="category_items_last">
+                <h3>Bussines</h3>
+                <p>(6)</p>
+              </div>
+            </div>
+             <div class="category">
+              <h2>Popular Article</h2>
+              <div class="blog-item_category">
+              <img
+                src="images/blog_img1.png"
+                alt="Blog 1"
+              />
+              <div class="blog-text_category">
+                <p>Even the all-powerful Pointing has no control about</p>
+                <span
+                  ><i class="fa-regular fa-calendar-days"></i> June 27,
+                  2019</span
+                ><br />
+                <span><i class="fa-solid fa-user"></i> Admin</span> &nbsp;
+                <span><i class="fa-regular fa-comment"></i> 19</span>
+              </div>
+            </div>
+             <div class="blog-item_category">
+              <img
+                src="images/blog_img2.png"
+                alt="Blog 1"
+              />
+              <div class="blog-text_category">
+                <p>Even the all-powerful Pointing has no control about</p>
+                <span
+                  ><i class="fa-regular fa-calendar-days"></i> June 27,
+                  2019</span
+                ><br />
+                <span><i class="fa-solid fa-user"></i> Admin</span> &nbsp;
+                <span><i class="fa-regular fa-comment"></i> 19</span>
+              </div>
+            </div>
+             <div class="blog-item_category">
+              <img
+                src="images/blog_img3.png"
+                alt="Blog 1"
+              />
+              <div class="blog-text_category">
+                <p>Even the all-powerful Pointing has no control about</p>
+                <span
+                  ><i class="fa-regular fa-calendar-days"></i> June 27,
+                  2019</span
+                > <br>
+                <span><i class="fa-solid fa-user"></i> Admin</span> <br>
+                <span><i class="fa-regular fa-comment"></i> 19</span>
+              </div>
+            </div>
+            </div>
+            <div class="tag-cloud">
+    <h3>Tag Cloud</h3>
+    <div class="tags">
+      <span class="tag">SCHOOL</span>
+      <span class="tag">KIDS</span>
+      <span class="tag">NURSERY</span>
+      <span class="tag">DAYCARE</span>
+      <span class="tag">CARE</span>
+      <span class="tag">KINDERGARTEN</span>
+      <span class="tag">TEACHER</span>
+    </div>
+        </div>
+        <div class="category">
+              <h2>category</h2>
+              <div class="category_items">
+                <h3>Bussines</h3>
+                <p>(6)</p>
+              </div>
+              <div class="category_items">
+                <h3>Bussines</h3>
+                <p>(6)</p>
+              </div>
+              <div class="category_items">
+                <h3>Bussines</h3>
+                <p>(6)</p>
+              </div>
+              <div class="category_items">
+                <h3>Bussines</h3>
+                <p>(6)</p>
+              </div>
+              <div class="category_items_last">
+                <h3>Bussines</h3>
+                <p>(6)</p>
+              </div>
+            </div>
+            <div class="category">
+              <h2>pragraph</h2>
+              <div class="category_items_pragraph">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero voluptates, vel mollitia hic officiis vitae culpa? Beatae, sunt incidunt quam sint necessitatibus, nostrum vitae autem nemo perspiciatis eveniet voluptate expedita nulla. Natus corporis, facilis consequatur porro sit deserunt dolore molestias dolorem illo debitis, autem veniam, distinctio excepturi eaque voluptatibus ratione!</p>
+            </div>
+      </div>
+      </div>
+      
+    </section>
+    <!-- footer -->
+         <section>
+            <!-- footer -->
+       <footer class="footer">
+        <div class="footer-container">
+          <!-- Contact Section -->
+          <div class="footer-box">
+            <h2>Have a Questions?</h2>
+            <p>
+              <i class="fa-solid fa-location-dot"></i> 203 Fake St. Mountain
+              View, San Francisco, California, USA
+            </p>
+            <p><i class="fa-solid fa-phone"></i> +2 392 3929 210</p>
+            <p><i class="fa-solid fa-envelope"></i> info@yourdomain.com</p>
+          </div>
+
+          <!-- Recent Blog -->
+          <div class="footer-box">
+            <h2>Recent Blog</h2>
+            <div class="blog-item">
+              <img
+                src="images/blog_img1.png"
+                alt="Blog 1"
+              />
+              <div class="blog-text">
+                <p>Even the all-powerful Pointing has no control about</p>
+                <span
+                  ><i class="fa-regular fa-calendar-days"></i> June 27,
+                  2019</span
+                ><br />
+                <span><i class="fa-solid fa-user"></i> Admin</span> &nbsp;
+                <span><i class="fa-regular fa-comment"></i> 19</span>
+              </div>
+            </div>
+            <div class="blog-item">
+              <img
+                src="images/blog_img2.png"
+                alt="Blog 2"
+              />
+              <div class="blog-text">
+                <p>Even the all-powerful Pointing has no control about</p>
+                <span
+                  ><i class="fa-regular fa-calendar-days"></i> June 27,
+                  2019</span
+                ><br />
+                <span><i class="fa-solid fa-user"></i> Admin</span> &nbsp;
+                <span><i class="fa-regular fa-comment"></i> 19</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Links -->
+          <div class="footer-box">
+            <h2>Links</h2>
+            <ul class="footer-links">
+              <li>→ Home</li>
+              <li>→ About</li>
+              <li>→ Services</li>
+              <li>→ Projects</li>
+              <li>→ Contact</li>
+            </ul>
+          </div>
+          <!-- Subscribe -->
+          <div class="footer-box">
+            <h2>Subscribe Us!</h2>
+            <div class="subscribe-box">
+              <input type="email" placeholder="Enter email address" />
+              <button>Subscribe</button>
+            </div>
+            <h2 class="connect-title">Connect With Us</h2>
+            <div class="social-icons">
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <p class="footer-bottom">
+          Copyright ©2025 All rights reserved | This template is made with 🩶 by
+          Colorlib
+        </p>
+      </footer>
+     </section>
+
+      <script>
+      const menu = document.querySelector(".nav ul");
+      const toggle = document.querySelector(".menue_toggle");
+      toggle.addEventListener("click", () => {
+        menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+      });
+    </script>
+  </body>
+
+  
+</html>
+
