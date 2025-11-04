@@ -440,7 +440,7 @@
       .request {
         margin-top: 70px;
         height: 150px;
-        background-image: url(cover.jpg);
+        background-image: url(images/cover.jpg);
         background-position: center;
         background-size: cover;
       }
