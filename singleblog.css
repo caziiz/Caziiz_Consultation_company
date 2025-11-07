@@ -30,6 +30,9 @@
         align-items: center;
         padding: 0.8rem 8rem;
       }
+      .logo{
+        display: none;
+      }
       .top_header_email {
         display: flex;
       }
@@ -847,6 +850,7 @@
           justify-content: space-between;
           /* gap: 15px; */
           padding: 0.3rem 1rem;
+          display: none;
         }
         .top_header_email {
           display: none;
@@ -861,13 +865,14 @@
         .nav {
           justify-content: space-between;
           gap: 20px;
-          padding: 0.3rem 0.3rem;
+          flex-direction: row-reverse;
+          padding: 0.3rem 0.9rem;
         }
         .nav ul {
           display: none;
           position: absolute;
-          left: 0;
-          top: 100px;
+          right: 0;
+          top:30px;
           flex-direction: column;
           background-color: #0d1128;
           text-align: left;
@@ -880,6 +885,15 @@
         }
         .menue_toggle {
           display: block;
+        }
+        .form{
+          display: none;
+        }
+        .logo{
+          display: flex;
+        }
+        .logo h2{
+          font-size: 1rem;
         }
         .container{
           display: block;
@@ -1023,6 +1037,7 @@
           justify-content: space-between;
           /* gap: 15px; */
           padding: 0.3rem 1rem;
+          display: none;
         }
         .top_header_email {
           display: none;
@@ -1037,13 +1052,14 @@
         .nav {
           justify-content: space-between;
           gap: 20px;
-          padding: 0.3rem 0.3rem;
+          flex-direction: row-reverse;
+          padding: 0.3rem 0.9rem;
         }
         .nav ul {
           display: none;
           position: absolute;
-          left: 0;
-          top: 100px;
+          right: 0;
+          top:30px;
           flex-direction: column;
           background-color: #0d1128;
           text-align: left;
@@ -1056,6 +1072,15 @@
         }
         .menue_toggle {
           display: block;
+        }
+        .form{
+          display: none;
+        }
+        .logo{
+          display: flex;
+        }
+        .logo h2{
+          font-size: 1rem;
         }
         .container{
           display: block;

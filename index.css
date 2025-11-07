@@ -27,6 +27,9 @@
       main{
         overflow: hidden;
       }
+      .logo{
+        display: none;
+      }
 
       .top_header {
         display: flex;
@@ -147,12 +150,13 @@
       .cover {
         display: block;
         position: relative;
-        max-height: 700px;
+        /* max-height: 700px; */
         background-color: #000000;
       }
       .cover img {
         width: 100%;
-        height: 100%;
+        /* height: 100%; */
+        object-fit: cover;
         opacity: 0.7;
       }
       .cover_content {
@@ -295,6 +299,8 @@
                 margin-bottom: 10px;
                 padding: 15px;
                 font-weight: bolder;
+                        color: #233e62;
+
       }
       .box2 h4 p{
         font-size: 17px;
@@ -849,6 +855,7 @@
       .our_client_content h2 {
         font-size: 50px;
         padding: 20px;
+        color: #233e62;
       }
       .our_client_content p {
         font-size: 20px;
@@ -878,6 +885,7 @@
       }
       .txt_cliensay {
         padding: 10px;
+        
       }
       .client {
         display: flex;
@@ -1298,9 +1306,7 @@
           justify-content: space-between;
           padding: 0.3rem 1.5rem;
         }
-        .cover {
-          height: 100vh;
-        }
+       
         .cover_content {
           margin-top: -1.5rem;
         }
@@ -1315,6 +1321,15 @@
           /* flex: 1; */
           max-width: 330px;
           margin-left: -1rem;
+        }
+        .box2 p{
+          padding: 1rem;
+        }
+        .service p{
+          padding: 0rem 3rem;
+        }
+        .our_client_content p{
+          padding: 0rem 6rem;
         }
         .box {
           /* flex: 1; */
@@ -1416,10 +1431,6 @@
         .nav ul li a {
           font-size: 0.9rem;
         }
-        .cover {
-          width: 100vw;
-          height: 100vh;
-        }
         .cover img {
           object-fit: cover;
           width: 100%;
@@ -1465,16 +1476,30 @@
           margin-top: 0;
           margin-left: 30px;
         }
+        .box1 h2{
+          font-size: 2rem;
+        }
         .box2 {
           width: 100%;
           margin-left: -50px;
         }
-
+        .box2 h4 {
+          padding: 1.5rem ;
+          color: #233e62;
+        }
+        .box2 p{
+          padding: 1rem;
+        }
+        .service p{
+          padding: 0rem 5rem;
+        }
         .service_grid {
           grid-template-columns: repeat(2, 1fr);
           padding: 20px;
         }
-
+        .our_client_content p{
+          padding: 0rem 9rem;
+        }
         .footer {
           padding: 80px 60px;
         }
@@ -1497,6 +1522,7 @@
           justify-content: space-between;
           /* gap: 15px; */
           padding: 0.3rem 1rem;
+          display: none;
         }
         .top_header_email {
           display: none;
@@ -1511,13 +1537,14 @@
         .nav {
           justify-content: space-between;
           gap: 20px;
-          padding: 0.3rem 0.3rem;
+          flex-direction: row-reverse;
+          padding: 0.3rem 0.9rem;
         }
         .nav ul {
           display: none;
           position: absolute;
-          left: 0;
-          top: 100px;
+          right: 0;
+          top:30px;
           flex-direction: column;
           background-color: #0d1128;
           text-align: left;
@@ -1531,19 +1558,25 @@
         .menue_toggle {
           display: block;
         }
-        .cover {
-          height: 100vh;
-          width: 100vw;
-          object-fit: cover;
+        .form{
+          display: none;
+        }
+        .logo{
+          display: flex;
+        }
+        .logo h2{
+          font-size: 1rem;
         }
         .cover_content {
           /* width: 200px; */
           /* margin: 0 auto; */
-          margin-left: -2.9rem;
+          left: 2rem;
+          top: 3rem;
           /* margin-top: 0rem; */
         }
         .cover_content h1 {
           font-size: 1.5rem;
+          left: 0;
         }
         .grid {
           display: flex;
@@ -1552,7 +1585,7 @@
           gap: 25px;
         }
 
-        .box1,
+      
         .box:nth-of-type(3),
         .box:nth-of-type(4),
         .box:nth-of-type(5),
@@ -1565,8 +1598,24 @@
           width: 100%;
           margin-left: 6px;
         }
+        .box2 h4 {
+          padding: 1.5rem ;
+          color: #233e62;
+        }
+        .box2 p{
+          padding: 1rem;
+        }
+        .box1{
+          margin:0 auto;
+          width: 100%;
+        }
+        .box1 h2{
+          font-size: 1.6rem;
+          padding: 0rem 1rem;
+        }
         .box1 p {
           font-size: 1rem;
+          padding: 1rem;
         }
 
         .service_grid {
@@ -1585,12 +1634,13 @@
           margin-bottom: 50px;
         }
         .block2 h1 {
-          font-size: 1rem;
+          font-size: 2rem;
         }
         .block2 span {
-          font-size: 1rem;
+          font-size: 2rem;
         }
         .block2 h1 p {
+          display: none;
           font-size: 0.8rem;
         }
         .request .request_content {
