@@ -237,6 +237,7 @@
               margin-bottom: 10px;
               padding: 15px;
               font-weight: bolder;
+              color: #233e62;
       }
       .box2 p {
         padding: 20px;
@@ -303,12 +304,14 @@
       .vidleft h2 {
         font-size: 40px;
         padding-bottom: 12px;
+        color: #233e62;
       }
       .vidleft p {
         font-size: large;
         margin-top: 30px;
         font-weight: 100;
         line-height: 2;
+        color: black;
       }
       /* section2 */
       .section2 {
@@ -389,6 +392,7 @@
       .our_client_content h2 {
         font-size: 50px;
         padding: 20px;
+        color: #233e62;
       }
       .our_client_content p {
         font-size: 20px;
